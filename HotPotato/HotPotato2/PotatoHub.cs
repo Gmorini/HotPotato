@@ -54,6 +54,7 @@ namespace HotPotato
         public void ResetGame()
         {
             _potatoManager.ResetClients();
+            AddClient();
         }
     }
 }
