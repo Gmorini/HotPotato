@@ -5,6 +5,5 @@ C:\Users\Guillermo Morini\Desktop\GMorini\GMorini\HotPotato\HotPotato\HotPotato.
 C:\Users\Guillermo Morini\Desktop\GMorini\GMorini\HotPotato\HotPotato\HotPotato.ConsoleApp\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Guillermo Morini\Desktop\GMorini\GMorini\HotPotato\HotPotato\HotPotato.ConsoleApp\bin\Debug\Microsoft.AspNet.SignalR.Client.xml
 C:\Users\Guillermo Morini\Desktop\GMorini\GMorini\HotPotato\HotPotato\HotPotato.ConsoleApp\bin\Debug\Newtonsoft.Json.xml
-C:\Users\Guillermo Morini\Desktop\GMorini\GMorini\HotPotato\HotPotato\HotPotato.ConsoleApp\obj\Debug\HotPotato.ConsoleApp.csprojResolveAssemblyReference.cache
 C:\Users\Guillermo Morini\Desktop\GMorini\GMorini\HotPotato\HotPotato\HotPotato.ConsoleApp\obj\Debug\HotPotato.ConsoleApp.exe
 C:\Users\Guillermo Morini\Desktop\GMorini\GMorini\HotPotato\HotPotato\HotPotato.ConsoleApp\obj\Debug\HotPotato.ConsoleApp.pdb

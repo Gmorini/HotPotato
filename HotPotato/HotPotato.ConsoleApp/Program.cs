@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNet.SignalR.Client;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,8 +12,11 @@ namespace HotPotato.ConsoleApp
     {
         static void Main(string[] args)
         {
-            var hubConnection = new HubConnection("http://localhost:17553");
+            //to run locally, set the connection string to http://localhost:17553 in app settings. You may need to change the port number on the url.
 
+            var connectionString = ConfigurationManager.ConnectionStrings["signalRConnectionString"].ConnectionString;
+            
+            var hubConnection = new HubConnection(connectionString);
             var hotPotato = hubConnection.CreateHubProxy("PotatoHub");
 
             hotPotato.On<string, bool>("UpdatePotatoState", (potatoHolder, iHavePotato) =>
