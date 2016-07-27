@@ -23,6 +23,11 @@
                 }
             };
 
+            dangPotato.client.gameReset = function () {
+                $('#potatoStatus').empty();
+                $('#potatoStatus').append('<div>Game has been reset! Reload to join.</div>');
+            }
+
             dangPotato.client.updateClientWithError = function (error) {
                 $('#potatoStatus').append('<div>' + error + '</div>');
             }

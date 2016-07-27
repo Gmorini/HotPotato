@@ -23,6 +23,12 @@ namespace HotPotato
 
         public bool PassPotato(string client, out string message)
         {
+            if (!_clients.Contains(client))
+            {
+                message = "Can't send potato, you're not in the game! Reload to join.";
+                return false;
+            }
+
             if (_clientWithPotato == client)
             {
                 var otherClients = GetClientsWithoutPotato();

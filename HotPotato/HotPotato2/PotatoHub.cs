@@ -53,7 +53,14 @@ namespace HotPotato
 
         public void ResetGame()
         {
+            var allClients = _potatoManager.GetClients();
+
+            var otherClients = allClients.Where(client => client != Context.ConnectionId).ToList();
+
             _potatoManager.ResetClients();
+
+            Clients.Clients(otherClients).GameReset();
+
             AddClient();
         }
     }
