@@ -13,6 +13,7 @@ namespace HotPotato.ConsoleApp
         static void Main(string[] args)
         {
             //to run locally, set the connection string to http://localhost:17553 in app settings. You may need to change the port number on the url.
+            //to hit azure, use http://hotpotato220160726083439.azurewebsites.net
 
             var connectionString = ConfigurationManager.ConnectionStrings["signalRConnectionString"].ConnectionString;
             
@@ -42,6 +43,16 @@ namespace HotPotato.ConsoleApp
                 Console.WriteLine(error);
             });
 
+            hotPotato.On<string>("playerJoined", (message) =>
+            {
+                Console.WriteLine(message);
+            });
+
+            hotPotato.On<string>("joined", (message) =>
+            {
+                Console.WriteLine(message);
+            });
+
             hubConnection.Start().Wait();
 
             hotPotato.Invoke("addClient").Wait();
@@ -57,6 +68,10 @@ namespace HotPotato.ConsoleApp
                 else if (key == 'r')
                 {
                     hotPotato.Invoke("resetGame").Wait();
+                }
+                else if (key == 'j')
+                {
+                    hotPotato.Invoke("addClient").Wait();
                 }
 
                 key = Console.ReadKey().KeyChar;

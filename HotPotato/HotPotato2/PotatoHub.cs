@@ -31,8 +31,19 @@ namespace HotPotato
 
         public void AddClient()
         {
-            _potatoManager.AddClient(Context.ConnectionId);
-            UpdateClient(Context.ConnectionId);
+            if (_potatoManager.AddClient(Context.ConnectionId))
+            {
+                Clients.Others.PlayerJoined($"{Context.ConnectionId} has joined the game!");
+                Clients.Client(Context.ConnectionId).Joined($"Joined Game as {Context.ConnectionId}");
+
+                UpdateClient(Context.ConnectionId);
+            }
+            else
+            {
+                Clients.Client(Context.ConnectionId).Joined($"Already in Game as {Context.ConnectionId}");
+
+                UpdateClient(Context.ConnectionId);
+            }
         }
 
         public void UpdateClient(string client)

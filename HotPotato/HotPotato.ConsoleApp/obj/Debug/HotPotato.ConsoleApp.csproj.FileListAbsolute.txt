@@ -7,3 +7,4 @@ C:\Users\Guillermo Morini\Desktop\GMorini\GMorini\HotPotato\HotPotato\HotPotato.
 C:\Users\Guillermo Morini\Desktop\GMorini\GMorini\HotPotato\HotPotato\HotPotato.ConsoleApp\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Guillermo Morini\Desktop\GMorini\GMorini\HotPotato\HotPotato\HotPotato.ConsoleApp\obj\Debug\HotPotato.ConsoleApp.exe
 C:\Users\Guillermo Morini\Desktop\GMorini\GMorini\HotPotato\HotPotato\HotPotato.ConsoleApp\obj\Debug\HotPotato.ConsoleApp.pdb
+C:\Users\Guillermo Morini\Desktop\GMorini\GMorini\HotPotato\HotPotato\HotPotato.ConsoleApp\obj\Debug\HotPotato.ConsoleApp.csprojResolveAssemblyReference.cache

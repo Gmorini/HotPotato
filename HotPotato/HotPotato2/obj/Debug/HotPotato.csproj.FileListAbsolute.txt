@@ -44,3 +44,4 @@ C:\Users\Guillermo Morini\Desktop\GMorini\GMorini\HotPotato\HotPotato\HotPotato2
 C:\Users\Guillermo Morini\Desktop\GMorini\GMorini\HotPotato\HotPotato\HotPotato2\bin\Newtonsoft.Json.xml
 C:\Users\Guillermo Morini\Desktop\GMorini\GMorini\HotPotato\HotPotato\HotPotato2\obj\Debug\HotPotato2.dll
 C:\Users\Guillermo Morini\Desktop\GMorini\GMorini\HotPotato\HotPotato\HotPotato2\obj\Debug\HotPotato2.pdb
+C:\Users\Guillermo Morini\Desktop\GMorini\GMorini\HotPotato\HotPotato\HotPotato2\obj\Debug\HotPotato.csprojResolveAssemblyReference.cache

@@ -32,6 +32,14 @@
                 $('#potatoStatus').append('<div>' + error + '</div>');
             }
 
+            dangPotato.client.playerJoined = function (message) {
+                $('#potatoStatus').append('<div>' + message + '</div>');
+            }
+
+            dangPotato.client.joined = function (message) {
+                $('#potatoStatus').append('<div>' + message + '</div>');
+            }
+
             $.connection.hub.start().done(function () {
                 dangPotato.server.addClient();
 
@@ -42,6 +50,10 @@
                 $("#resetGame").click(function () {
                     dangPotato.server.resetGame();
                 });
+
+                $("#joinGame").click(function () {
+                    dangPotato.server.addClient();
+                });
             });
         });
     </script>
@@ -49,6 +61,7 @@
 <body>
     <button id="potatoSender">Send Potato</button>
     <button id="resetGame">Reset game</button>
+    <button id="joinGame">Join game</button>
     <div id="potatoStatus"></div>
 </body>
 </html>

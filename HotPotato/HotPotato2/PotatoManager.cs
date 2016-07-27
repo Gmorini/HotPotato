@@ -59,14 +59,21 @@ namespace HotPotato
             return result;
         }
 
-        public void AddClient(string client)
+        public bool AddClient(string client)
         {
-            _clients.Add(client);
-
-            if (_clientWithPotato == string.Empty)
+            if (!_clients.Contains(client))
             {
-                _clientWithPotato = client;
+                _clients.Add(client);
+
+                if (_clientWithPotato == string.Empty)
+                {
+                    _clientWithPotato = client;
+                }
+
+                return true;
             }
+
+            return false;
         }
 
         public List<string> GetClientsWithoutPotato()

@@ -23,8 +23,21 @@
                 }
             };
 
+            dangPotato.client.gameReset = function () {
+                $('#potatoStatus').empty();
+                $('#potatoStatus').append('<div>Game has been reset! Reload to join.</div>');
+            }
+
             dangPotato.client.updateClientWithError = function (error) {
                 $('#potatoStatus').append('<div>' + error + '</div>');
+            }
+
+            dangPotato.client.playerJoined = function (message) {
+                $('#potatoStatus').append('<div>' + message + '</div>');
+            }
+
+            dangPotato.client.joined = function (message) {
+                $('#potatoStatus').append('<div>' + message + '</div>');
             }
 
             $.connection.hub.start().done(function () {
@@ -37,6 +50,10 @@
                 $("#resetGame").click(function () {
                     dangPotato.server.resetGame();
                 });
+
+                $("#joinGame").click(function () {
+                    dangPotato.server.addClient();
+                });
             });
         });
     </script>
@@ -44,6 +61,7 @@
 <body>
     <button id="potatoSender">Send Potato</button>
     <button id="resetGame">Reset game</button>
+    <button id="joinGame">Join game</button>
     <div id="potatoStatus"></div>
 </body>
 </html>
